@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Zak's project</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+<article>
+    <main>
+<h1>A Basic HTML5 Template For Any Project</h1>
+
+<h2>As you learn HTML5 and add new techniques to your toolbox, you’re likely going to want to build yourself a 
+boilerplate from which you can begin all your HTML5-based projects. 
+We encourage this, and you may also consider using one of the many online sources that provide a basic HTML5 starting point for you.
+</h2>
+<p>In this article, we’ll look at how to get started with this. Let’s start simple, with a bare-bones HTML5 page:</p>
+<img class="image-examples" src="https://i.imgur.com/mH4nZra.png" title="source: imgur.com" /></a>" alt="basic-html-pics">
+<p>With that basic template in place, let’s now examine some of the significant 
+parts of the markup and how these might differ from how HTML was written prior to HTML5.</p>
+<h2>The Doctype</h2>
+<p>First, we have the Document Type Declaration, or doctype. This is simply a way to tell the browser — or any other parser — what type of document it’s looking at. In the case of HTML files, it means the specific version and flavor of HTML. The doctype should always be the first item at the top of any HTML file. Many years ago, the doctype declaration was an ugly and hard-to-remember mess. For XHTML 1.0 Strict:
+    <img class="image-two"src="https://i.imgur.com/GGMRkY7.png" title="source: imgur.com" /></a>
+    Although that long string of text at the top of our documents hasn’t really hurt us (other than forcing our sites’ viewers to download a few extra bytes), HTML5 has done away with that indecipherable eyesore. Now all you need is this:   
+    Simple, and to the point. The doctype can be written in uppercase, lowercase, or mixed case. You’ll notice that the “5” is conspicuously missing from the declaration. Although the current iteration of web markup is known as “HTML5,” it really is just an evolution of previous HTML standards — and future specifications will simply be a development of what we have today.
+    Because browsers are usually required to support all existing content on the Web, there’s no reliance on the doctype to tell them which features should be supported in a given document. In other words, the doctype alone is not going to make your pages HTML5-compliant. It’s really up to the browser to do this. In fact, you can use one of those two older doctypes with new HTML5 elements on the page and the page will render the same as it would if you used the new doctype.</p>
+<h2>The HTML Element</h2>
+<p>Next up in any HTML document is the html element, which has not changed significantly with HTML5. In our example, we’ve included the lang attribute with a value of en, which specifies that the document is in English. In XHTML-based syntax, you’d be required to include an xmlns attribute. In HTML5, this is no longer needed, and even the lang attribute is unnecessary for the document to validate or function correctly.
+    So here’s what we have so far, including the closing html tag:</p>
+<h2> The head Element</h2>
+<p>The next part of our page is the section. The first line inside the head is the one that defines the character encoding for the document. This is another element that’s been simplified since XHTML and HTML4, and is an optional feature, but recommended. In the past, you may have written it like this:
+
+    HTML5 improves on this by reducing the character encoding tag to the bare minimum:
+    
+    In nearly all cases, utf-8 is the value you’ll be using in your documents. A full explanation of character encoding is beyond the scope of this article, and it probably won’t be that interesting to you, either. Nonetheless, if you want to delve a little deeper, you can read up on the topic on W3C or WHATWG.
+    
+    Note: to ensure that all browsers read the character encoding correctly, the entire character encoding declaration must be included somewhere within the first 512 characters of your document. It should also appear before any content-based elements like the element that follows it in our example site).
+    
+    There’s much more we could write about this subject, but we want to keep you awake — so we’ll spare you those details! For now, we’re content to accept this simplified declaration and move on to the next part of our document:
+    In these lines, HTML5 barely differs from previous syntaxes. The page title (the only mandatory element inside the head) is declared the same as it always was, and the meta tags we’ve included are merely optional examples to indicate where these would be placed; you could put as many valid meta elements here as you like.
+    The key part of this chunk of markup is the stylesheet, which is included using the customary link element. There are no required attributes for link other than href and rel. The type attribute (which was common in older versions of HTML) is not necessary, nor was it ever needed to indicate the content type of the stylesheet.</p>
+<h2>Level the Playing Field</h2>
+<p>When HTML5 was introduced, it included a number of new elements, such as article and section. You might think this would be a major problem for older browser support for unrecognized elements, but you’d be wrong. This is because the majority of browsers don’t actually care what tags you use. If you had an HTML document with a recipe tag (or even a ziggy tag) in it, and your CSS attached some styles to that element, nearly every browser would proceed as if this were totally normal, applying your styling without complaint.
+    Of course, such a hypothetical document would fail to validate and may have accessibility problems, but it would render correctly in almost all browsers — the exception being old versions of Internet Explorer (IE). Prior to version 9, IE prevented unrecognized elements from receiving styling. These mystery elements were seen by the rendering engine as “unknown elements,” so you were unable to change the way they looked or behaved. This includes not only our imagined elements, but also any elements that had yet to be defined at the time those browser versions were developed. That means (you guessed it) the new HTML5 elements.
+    The good news is that, these days, usage of IE has dropped right off, with IE11 having fallen to around 2.7% global usage (as of 2018), and versions prior to that virtually having dropped off the map. (You can view stats on browser usage and support for HTML5 features in heneral on the Can i use site.)
+    If you really need to support ancient browsers, though, you can still use the trusty HTML5 Shiv, a very simple piece of JavaScript originally developed by John Resig. Inspired by an idea by Sjoerd Visscher, it made the new HTML5 elements styleable in older versions of IE. Really, though, this shouldn’t be needed now. As indicated by Can i use, HTML5 elements are supported across all modern browsers and even even their most recent older versions. (Click the “Show all” option to see all browser versions.) The one exception is that some browsers don’t recognize the newer main element. However, for those browsers you can still use this element, as long as you add approraite styling (such as setting it to be a block element.)</p>
+
+<h2>The Reset is History</h2>
+<p>Looking at the rest of our starting template, we have the usual body element along with its closing tag and the closing html tag. We also have a reference to a JavaScript file inside a script element.
+    Much like the link tag discussed earlier, the tag does not require that you declare a type attribute. If you ever wrote XHTML, you might remember your script tags looking like this:
+    Since JavaScript is, for all practical purposes, the only real scripting language used on the Web, and since all browsers will assume that you’re using JavaScript even when you don’t explicitly declare that fact, the type attribute is unnecessary in HTML5 documents:
+    We’ve put the script element at the bottom of our page to conform to best practices for embedding JavaScript. This has to do with the page-loading speed; when a browser encounters a script, it will pause downloading and rendering the rest of the page while it parses the script. This results in the page appearing to load much more slowly when large scripts are included at the top of the page before any content. It’s why most scripts should be placed at the very bottom of the page, so that they’ll only be parsed after the rest of the page has loaded.
+    In some cases, however, (such as with the HTML5 shiv) the script may need to be placed in the head of your document, because you want it to take effect before the browser starts rendering the page.</p>
+    <h2>What Is HTML5?</h2>
+    <ul>
+        <li>HTML5 is the current active specification for HTML, or Hypertext Markup Language.</li>
+        <li>HTML forms the content layer of the web, providing a way to structure information in a way that can be rendered by browsers and processed by search engine crawlers.</li>
+        <li>HTML5 was initially released in 2008, and has added additional features since then. It improves on earlier versions by enabling native multimedia content, support for SVG and MathML vector graphics, and new semantic document elements.</li>
+        <li>HTML is useful on its own, but much of its power is unlocked by the web’s other layers. CSS is the styling layer that determines how this content is displayed. JavaScript is the behavior layer that allows user interaction and dynamic data manipulation.</li>
+    </ul>
+</main>
+</article>
+</html> 
