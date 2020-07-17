@@ -1,15 +1,17 @@
 /* CSS */ 
-style
-.background{ 
-    color: black; 
+<style>
+
+.blue-background{ 
+    background-color: rgb(17, 181, 247); 
 }
 article{
     font-family: Roboto, Arial;
     padding-right: 30em;
     padding-left: 15em;
     word-spacing: 2mm;
+    background-color: rgb(17, 181, 247);
 }
-h1{
+.introduction{
     font-size: 45px;
     border: 5mm;
    margin-right: 1em;
@@ -38,8 +40,7 @@ p {
     font-family: Roboto, Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
     margin: 2rem, 2rem, 2rem, 2rem;
-    letter-spacing: .1em;
-    border-spacing: 17mm;
+    line-height: 2.0;
 
 }
 .title-background{
@@ -50,7 +51,7 @@ p {
 }
 .image-examples{ 
    height: 500px;
-   width: 90%;
+   width: 20%;
    padding-top: 3em;
    padding-bottom: 3em;
 
@@ -60,10 +61,4 @@ p {
     width:1000px;
     border: 500rem;
     padding-bottom: 3em;
-    padding-top: 3em;
-ul{ 
-    font-size:18px;
-    font-family: Roboto, Geneva, Tahoma, sans-serif;
-    padding:10px, 10px, 10px,10px;
-    box-sizing: border-box;
-}
+    </style>
