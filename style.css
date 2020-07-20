@@ -1,15 +1,17 @@
 /* CSS */ 
 <style>
 
-.blue-background{ 
-    background-color: rgb(17, 181, 247); 
+
 }
 article{
     font-family: Roboto, Arial;
     padding-right: 30em;
     padding-left: 15em;
     word-spacing: 2mm;
-    background-color: rgb(17, 181, 247);
+    background-color: rgb(17, 181, 247);}
+   
+ .blue-background{ 
+    background-color: rgb(17, 181, 247); 
 }
 .introduction{
     font-size: 45px;
